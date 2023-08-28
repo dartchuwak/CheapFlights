@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		A330EC592A9C9AFF0057B634 /* CheapFlights_WildberriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330EC582A9C9AFF0057B634 /* CheapFlights_WildberriesApp.swift */; };
-		A330EC5B2A9C9AFF0057B634 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330EC5A2A9C9AFF0057B634 /* ContentView.swift */; };
 		A330EC5D2A9C9B000057B634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A330EC5C2A9C9B000057B634 /* Assets.xcassets */; };
 		A330EC602A9C9B000057B634 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A330EC5F2A9C9B000057B634 /* Preview Assets.xcassets */; };
+		A330EC682A9C9D390057B634 /* CheapFlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330EC672A9C9D390057B634 /* CheapFlights.swift */; };
+		A330EC6A2A9C9DB20057B634 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330EC692A9C9DB20057B634 /* NetworkService.swift */; };
+		A330EC6E2A9CA0030057B634 /* CheapFlightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330EC6D2A9CA0030057B634 /* CheapFlightViewModel.swift */; };
+		A330EC702A9CA0660057B634 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330EC6F2A9CA0660057B634 /* MainView.swift */; };
+		A330EC722A9CA6C60057B634 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330EC712A9CA6C60057B634 /* FlightCell.swift */; };
+		A330EC742A9CAD780057B634 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330EC732A9CAD780057B634 /* CellViewModel.swift */; };
+		A330EC782A9CB86E0057B634 /* FlightDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330EC772A9CB86E0057B634 /* FlightDetailsView.swift */; };
+		A330EC7A2A9D0C740057B634 /* FlightDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A330EC792A9D0C740057B634 /* FlightDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A330EC552A9C9AFF0057B634 /* CheapFlights Wildberries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CheapFlights Wildberries.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A330EC582A9C9AFF0057B634 /* CheapFlights_WildberriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapFlights_WildberriesApp.swift; sourceTree = "<group>"; };
-		A330EC5A2A9C9AFF0057B634 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A330EC5C2A9C9B000057B634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A330EC5F2A9C9B000057B634 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A330EC672A9C9D390057B634 /* CheapFlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapFlights.swift; sourceTree = "<group>"; };
+		A330EC692A9C9DB20057B634 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A330EC6D2A9CA0030057B634 /* CheapFlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapFlightViewModel.swift; sourceTree = "<group>"; };
+		A330EC6F2A9CA0660057B634 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A330EC712A9CA6C60057B634 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
+		A330EC732A9CAD780057B634 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		A330EC772A9CB86E0057B634 /* FlightDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsView.swift; sourceTree = "<group>"; };
+		A330EC792A9D0C740057B634 /* FlightDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +65,13 @@
 		A330EC572A9C9AFF0057B634 /* CheapFlights Wildberries */ = {
 			isa = PBXGroup;
 			children = (
+				A330EC6C2A9C9FF10057B634 /* ViewModel */,
+				A330EC6B2A9C9FEA0057B634 /* View */,
+				A330EC662A9C9D260057B634 /* Model */,
 				A330EC582A9C9AFF0057B634 /* CheapFlights_WildberriesApp.swift */,
-				A330EC5A2A9C9AFF0057B634 /* ContentView.swift */,
 				A330EC5C2A9C9B000057B634 /* Assets.xcassets */,
 				A330EC5E2A9C9B000057B634 /* Preview Content */,
+				A330EC692A9C9DB20057B634 /* NetworkService.swift */,
 			);
 			path = "CheapFlights Wildberries";
 			sourceTree = "<group>";
@@ -65,6 +82,34 @@
 				A330EC5F2A9C9B000057B634 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A330EC662A9C9D260057B634 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A330EC672A9C9D390057B634 /* CheapFlights.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A330EC6B2A9C9FEA0057B634 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A330EC6F2A9CA0660057B634 /* MainView.swift */,
+				A330EC772A9CB86E0057B634 /* FlightDetailsView.swift */,
+				A330EC712A9CA6C60057B634 /* FlightCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A330EC6C2A9C9FF10057B634 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A330EC6D2A9CA0030057B634 /* CheapFlightViewModel.swift */,
+				A330EC732A9CAD780057B634 /* CellViewModel.swift */,
+				A330EC792A9D0C740057B634 /* FlightDetailsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A330EC5B2A9C9AFF0057B634 /* ContentView.swift in Sources */,
+				A330EC682A9C9D390057B634 /* CheapFlights.swift in Sources */,
+				A330EC782A9CB86E0057B634 /* FlightDetailsView.swift in Sources */,
+				A330EC722A9CA6C60057B634 /* FlightCell.swift in Sources */,
+				A330EC7A2A9D0C740057B634 /* FlightDetailsViewModel.swift in Sources */,
+				A330EC702A9CA0660057B634 /* MainView.swift in Sources */,
+				A330EC742A9CAD780057B634 /* CellViewModel.swift in Sources */,
+				A330EC6A2A9C9DB20057B634 /* NetworkService.swift in Sources */,
+				A330EC6E2A9CA0030057B634 /* CheapFlightViewModel.swift in Sources */,
 				A330EC592A9C9AFF0057B634 /* CheapFlights_WildberriesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +327,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +357,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

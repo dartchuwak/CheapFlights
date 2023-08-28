@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct CheapFlights_WildberriesApp: App {
+
+    let networkService: NetworkService
+    let mainViewModel: CheapFlightsViewModel
+
+    init() {
+        self.networkService = NetworkService()
+        self.mainViewModel = CheapFlightsViewModel(networkService: networkService)
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView(viewModel: mainViewModel)
         }
     }
 }
