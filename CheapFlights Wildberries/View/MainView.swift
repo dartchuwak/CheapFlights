@@ -28,14 +28,12 @@ struct MainView: View {
                 } else {
                     ScrollView {
                         Spacer().frame(height: 8)
-                        ForEach(viewModel.flights) { flight in
-
-                            let viewModel = FlightDetailsViewModel(flight: flight)
+                        ForEach(viewModel.flights, id: \.id) { flight in
 
                             NavigationLink {
-                                FlightDetailsView(viewModel: viewModel)
+                                FlightDetailsView(viewModel: FlightDetailsViewModel(flight: flight))
                             } label: {
-                                FlightCell(viewModel: viewModel)
+                                FlightCell(viewModel: FlightCellViewModel(flight: flight))
                                     .padding(.horizontal)
                                     .shadow(radius: 5)
                             }
@@ -44,6 +42,7 @@ struct MainView: View {
                     .padding(.top)
                 }
             }
+            
         }
     }
 }

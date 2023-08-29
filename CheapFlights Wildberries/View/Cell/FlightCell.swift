@@ -9,8 +9,7 @@ import SwiftUI
 
 struct FlightCell: View {
     
-    @ObservedObject var viewModel: FlightDetailsViewModel
-    var isFavorite: Bool = false
+    @ObservedObject var viewModel: FlightCellViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -32,7 +31,7 @@ struct FlightCell: View {
                     .font(.title2)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     .onTapGesture {
-                        viewModel.isFavorite.toggle()
+                        viewModel.toogleFavorite()
                     }
             }
 
@@ -74,12 +73,15 @@ struct FlightCell: View {
             .padding()
             .background(Color.white)
             .cornerRadius(30)
+            .onAppear {
+                viewModel.updateFovorite()
+            }
 
     }
 }
 
 struct FlightCell_Previews: PreviewProvider {
     static var previews: some View {
-        FlightCell(viewModel: FlightDetailsViewModel(flight: Flight(startDate: "2023-09-16 00:00:00 +0000 UTC", endDate: "2023-09-16 00:00:00 +0000 UTC", startLocationCode: "LED", endLocationCode: "MOW", startCity: "Санкт-Петербург", endCity: "Москва", serviceClass: "", seats: [Seat(passengerType: "", count: 1)], price: 200, searchToken: "", isFavorite: true)))
+        FlightCell(viewModel: FlightCellViewModel(flight: Flight(startDate: "2023-09-16 00:00:00 +0000 UTC", endDate: "2023-09-16 00:00:00 +0000 UTC", startLocationCode: "LED", endLocationCode: "MOW", startCity: "Санкт-Петербург", endCity: "Москва", serviceClass: "", seats: [Seat(passengerType: "", count: 1)], price: 200, searchToken: "", isFavorite: true)))
     }
 }
