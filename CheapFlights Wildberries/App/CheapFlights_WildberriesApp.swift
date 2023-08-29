@@ -21,6 +21,9 @@ struct CheapFlights_WildberriesApp: App {
     var body: some Scene {
         WindowGroup {
             MainView(viewModel: mainViewModel)
+                .onAppear {
+                    mainViewModel.fetchFlights()
+                }
         }
     }
 }

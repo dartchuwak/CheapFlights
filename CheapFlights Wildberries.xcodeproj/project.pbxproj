@@ -65,13 +65,13 @@
 		A330EC572A9C9AFF0057B634 /* CheapFlights Wildberries */ = {
 			isa = PBXGroup;
 			children = (
+				A330EC7E2A9DE6220057B634 /* App */,
+				A330EC7B2A9DE5FF0057B634 /* Services */,
 				A330EC6C2A9C9FF10057B634 /* ViewModel */,
 				A330EC6B2A9C9FEA0057B634 /* View */,
 				A330EC662A9C9D260057B634 /* Model */,
-				A330EC582A9C9AFF0057B634 /* CheapFlights_WildberriesApp.swift */,
 				A330EC5C2A9C9B000057B634 /* Assets.xcassets */,
 				A330EC5E2A9C9B000057B634 /* Preview Content */,
-				A330EC692A9C9DB20057B634 /* NetworkService.swift */,
 			);
 			path = "CheapFlights Wildberries";
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 		A330EC6B2A9C9FEA0057B634 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A330EC7C2A9DE60E0057B634 /* Cell */,
 				A330EC6F2A9CA0660057B634 /* MainView.swift */,
 				A330EC772A9CB86E0057B634 /* FlightDetailsView.swift */,
-				A330EC712A9CA6C60057B634 /* FlightCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,6 +110,30 @@
 				A330EC792A9D0C740057B634 /* FlightDetailsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A330EC7B2A9DE5FF0057B634 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A330EC692A9C9DB20057B634 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A330EC7C2A9DE60E0057B634 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A330EC712A9CA6C60057B634 /* FlightCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A330EC7E2A9DE6220057B634 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A330EC582A9C9AFF0057B634 /* CheapFlights_WildberriesApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

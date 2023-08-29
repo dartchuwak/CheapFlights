@@ -13,29 +13,37 @@ struct MainView: View {
 
     var body: some View {
         NavigationView {
-            if viewModel.isLoading {
-                ProgressView()
-            } else {
-                ScrollView {
-                    Spacer().frame(height: 8)
-                    ForEach(viewModel.flights) { flight in
+            VStack(spacing: 0) {
+                Text("Пора в путешествие!")
+                    .font(.system(size: 24, weight: .bold))
+                Spacer()
 
-                        let viewModel = FlightDetailsViewModel(flight: flight)
+                if viewModel.isLoading {
+                    Text("Загрузка...")
+                        .padding()
+                        .foregroundColor(.gray)
+                    ProgressView()
+                        .scaleEffect(1.5)
+                    Spacer()
+                } else {
+                    ScrollView {
+                        Spacer().frame(height: 8)
+                        ForEach(viewModel.flights) { flight in
 
-                        NavigationLink {
-                            FlightDetailsView(viewModel: viewModel)
-                        } label: {
-                            FlightCell(viewModel: viewModel)
-                                .padding(.horizontal)
-                                .shadow(radius: 5)
+                            let viewModel = FlightDetailsViewModel(flight: flight)
+
+                            NavigationLink {
+                                FlightDetailsView(viewModel: viewModel)
+                            } label: {
+                                FlightCell(viewModel: viewModel)
+                                    .padding(.horizontal)
+                                    .shadow(radius: 5)
+                            }
                         }
                     }
+                    .padding(.top)
                 }
-                .padding(.top)
             }
-        }
-        .onAppear {
-            viewModel.fetchFlights()
         }
     }
 }
