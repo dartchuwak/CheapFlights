@@ -6,23 +6,28 @@
 //
 
 import Foundation
+import SwiftUI
 
 class FlightCellViewModel: ObservableObject {
 
     var flight: Flight
-    var startDate: String {
-        return traslateDate(input: flight.startDate)
-    }
-
-    var endDate: String {
-        return traslateDate(input: flight.endDate)
-    }
 
     @Published var isFavorite: Bool = false
 
     init(flight: Flight) {
         self.flight = flight
     }
+
+
+
+    var startDate: String {
+        return traslateDate(input: flight.startDate)
+    }
+    
+    var endDate: String {
+        return traslateDate(input: flight.endDate)
+    }
+
 
     func traslateDate(input: String) -> String {
         var output = ""
@@ -37,5 +42,14 @@ class FlightCellViewModel: ObservableObject {
             output = outputFormatter.string(from: date)
         }
         return output
+    }
+
+    func toogleFavorite() {
+        isFavorite.toggle()
+        flight.isFavorite = isFavorite
+    }
+
+    func updateFovorite() {
+        isFavorite = flight.isFavorite ?? false
     }
 }
