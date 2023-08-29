@@ -11,7 +11,6 @@ import SwiftUI
 class CheapFlightsViewModel: ObservableObject {
 
     let networkService: NetworkService
-
     @Published var flights: [Flight] = []
     @Published var isLoading: Bool = true
 

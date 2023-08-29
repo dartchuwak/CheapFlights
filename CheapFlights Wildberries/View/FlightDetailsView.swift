@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FlightDetailsView: View {
+
     @ObservedObject var viewModel: FlightDetailsViewModel
 
     var body: some View {
@@ -23,7 +24,7 @@ struct FlightDetailsView: View {
                     .font(.system(size: 22))
                     .foregroundColor(viewModel.isFavorite ? .red : .gray)
                     .onTapGesture {
-                        viewModel.isFavorite.toggle()
+                        viewModel.toogleFavorite()
                     }
             }
 
@@ -69,7 +70,9 @@ struct FlightDetailsView: View {
             }
             .frame(height: 200)
         }
-
+        .onAppear {
+            viewModel.updateFavorite()
+        }
         .padding()
     }
 }
