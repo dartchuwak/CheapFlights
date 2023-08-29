@@ -36,6 +36,7 @@ struct MainView: View {
                             } label: {
                                 let viewModel = FlightCellViewModel(flight: exFlight)
                                 FlightCell(viewModel: viewModel)
+
                                     .padding(.horizontal)
                                     .shadow(radius: 5)
                             }

@@ -8,27 +8,14 @@
 import Foundation
 
 // MARK: - Welcome
-class Response:ObservableObject, Codable {
-   var flights: [Flight]
+class Response: Codable {
+    var flights: [Flight]
 
     init(flights: [Flight]) {
         self.flights = flights
     }
-
-    enum CodingKeys: CodingKey {
-          case flights
-      }
-
-      required init(from decoder: Decoder) throws {
-          let container = try decoder.container(keyedBy: CodingKeys.self)
-          flights = try container.decode([Flight].self, forKey: .flights)
-      }
-
-      func encode(to encoder: Encoder) throws {
-          var container = encoder.container(keyedBy: CodingKeys.self)
-          try container.encode(flights, forKey: .flights)
-      }
 }
+
 
 // MARK: - Flight
 class Flight: ObservableObject, Identifiable, Codable {

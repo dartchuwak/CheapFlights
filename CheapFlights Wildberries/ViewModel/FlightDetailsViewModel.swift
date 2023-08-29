@@ -24,6 +24,7 @@ class FlightDetailsViewModel: ObservableObject {
 
     init(flight: Flight) {
         self.flight = flight
+       // self.isFavorite = flight.isFavorite ?? false
     }
 
     func traslateDate(input: String) -> String {

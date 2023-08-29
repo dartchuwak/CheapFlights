@@ -19,7 +19,6 @@ class FlightCellViewModel: ObservableObject {
     }
 
 
-
     var startDate: String {
         return traslateDate(input: flight.startDate)
     }

@@ -10,7 +10,7 @@ import SwiftUI
 struct FlightCell: View {
     
     @ObservedObject var viewModel: FlightCellViewModel
-    let update = UUID()
+
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
 
@@ -76,7 +76,6 @@ struct FlightCell: View {
             .onAppear {
               viewModel.updateFovorite()
             }
-
     }
 }
 
